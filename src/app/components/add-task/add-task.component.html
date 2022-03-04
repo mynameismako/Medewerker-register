@@ -1,0 +1,66 @@
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="firstname">Voornaam</label>
+    <input
+      type="text"
+      name="firstname"
+      [(ngModel)]="firstname"
+      id="firstname"
+    />
+  </div>
+  <div class="form-control">
+    <label for="lastname">Achternaam</label>
+    <input
+      type="text"
+      name="lastname"
+      [(ngModel)]="lastname"
+      id="lastname"
+    />
+  </div>
+  <div class="form-control">
+    <label for="gender">Geslacht</label>
+    <input
+      type="text"
+      name="gender"
+      [(ngModel)]="gender"
+      id="gender"
+    />
+  </div>
+  <div class="form-control">
+    <label for="adres">Adres en huisnummer</label>
+    <input
+      type="text"
+      name="adres"
+      [(ngModel)]="adres"
+      id="adres"
+    />
+  </div>
+  <div class="form-control">
+    <label for="district">District</label>
+    <input
+      type="text"
+      name="district"
+      [(ngModel)]="district"
+      id="district"
+    />
+  </div>
+  <div class="form-control">
+    <label for="phone">Telefoonnummer</label>
+    <input
+      type="number"
+      name="phone"
+      [(ngModel)]="phone"
+      id="phone"
+    />
+  </div>
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      name="email"
+      [(ngModel)]="email"
+      id="email"
+    />
+  </div>
+  <input type="submit" value="Opslaan" class="btn btn-success" style="width: 100%;"/>
+</form>

@@ -1,0 +1,9 @@
+<header>
+  <h3>Alle medewerkers</h3>
+  <app-button
+    *ngIf="hasRoute('/')"
+    color="{{ showAddTask ? '#dc3545' : '#007bff' }}"
+    text="{{ showAddTask ? 'Sluiten' : 'Toevoegen' }}"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
+</header>

@@ -1,0 +1,38 @@
+
+<div
+  [ngClass]="{ reminder: task.reminder }"
+  class="task"
+  (dblclick)="onToggle(task)"
+>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Voornaam</th>
+      <th>Achternaam</th>
+      <th>Geslacht</th>
+      <th>Adres</th>
+      <th>District</th>
+      <th>Telefoonnummer</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>{{ task.id }}</td>
+      <td>{{ task.firstname }}</td>
+      <td style="width: 12.8%;">{{ task.lastname }}</td>
+      <td>{{ task.gender }}</td>
+      <td style="width: 12.8%;">{{ task.adres }}</td>
+      <td>{{ task.district }}</td>
+      <td style="width: 10%;">{{ task.phone }}</td>
+      <td style="width: 22%;">{{ task.email }}</td>
+      <td><button (click)="onDelete(task)" class="btn" style="background-color: #dc3545 !important;">
+        <fa-icon [ngStyle]="{ color: 'white' }" [icon]="faTimes"></fa-icon>
+      </button>
+      <a routerLink="/edit-button/{{task.id}}">
+        <button type="button" class="btn" style="background-color: #007bff !important;">
+        <fa-icon [ngStyle]="{ color: 'white' }" [icon]="faPen"></fa-icon>
+      </button></a>
+    </td>
+    </tr>
+  </table>
+</div>
